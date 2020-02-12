@@ -4,6 +4,9 @@ const handleUserInput = (input) => {
   if (input === '\\q\n' || input === '\u0003') {
     process.exit();
   }
+  if (input === '\u0008') {
+    connection.write("Say: hola amigos!");
+  }
   if (input === 'w' || input === 'W') {
     connection.write("Move: up");
   }
